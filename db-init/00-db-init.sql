@@ -4,7 +4,7 @@ CREATE TABLE `users` (
   `userId` MEDIUMINT NOT NULL,
   `userName` varchar(255) NOT NULL,
   `userPassword` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `email` varchar(255),
   PRIMARY KEY (`id`),
   UNIQUE KEY (`userId`)
 );
