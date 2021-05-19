@@ -5,7 +5,7 @@ services:
     image: instagram-api
     restart: always
     ports:
-      - 9000:9000
+      - 6000:6000
     environment:
       MYSQL_DATABASE: "instagram"
       MYSQL_USER: "instagram"

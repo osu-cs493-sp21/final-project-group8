@@ -39,10 +39,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/",
+              "raw": "http://localhost:6000/users/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", ""]
             }
           },
@@ -54,10 +54,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:9000/users?page=2",
+              "raw": "http://localhost:6000/users?page=2",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users"],
               "query": [
                 {
@@ -100,10 +100,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/usersssss/",
+              "raw": "http://localhost:6000/usersssss/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["usersssss", ""]
             }
           },
@@ -140,10 +140,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/1",
+              "raw": "http://localhost:6000/users/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "1"]
             }
           },
@@ -180,10 +180,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/100000",
+              "raw": "http://localhost:6000/users/100000",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "100000"]
             }
           },
@@ -217,10 +217,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/",
+              "raw": "http://localhost:6000/users/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", ""]
             }
           },
@@ -254,10 +254,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/",
+              "raw": "http://localhost:6000/users/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", ""]
             },
             "description": "There is a user which has a same user id."
@@ -292,10 +292,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/",
+              "raw": "http://localhost:6000/users/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", ""]
             }
           },
@@ -329,10 +329,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/1",
+              "raw": "http://localhost:6000/users/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "1"]
             }
           },
@@ -366,10 +366,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/15",
+              "raw": "http://localhost:6000/users/15",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "15"]
             }
           },
@@ -403,10 +403,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/10",
+              "raw": "http://localhost:6000/users/10",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "10"]
             }
           },
@@ -440,10 +440,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/100000",
+              "raw": "http://localhost:6000/users/100000",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "100000"]
             }
           },
@@ -477,10 +477,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/1",
+              "raw": "http://localhost:6000/users/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "1"]
             }
           },
@@ -514,10 +514,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/users/170",
+              "raw": "http://localhost:6000/users/170",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["users", "170"]
             }
           },
@@ -559,10 +559,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/postsssss/",
+              "raw": "http://localhost:6000/postsssss/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["postsssss", ""]
             }
           },
@@ -599,10 +599,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/",
+              "raw": "http://localhost:6000/posts/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", ""]
             }
           },
@@ -614,10 +614,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:9000/posts?page=2",
+              "raw": "http://localhost:6000/posts?page=2",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts"],
               "query": [
                 {
@@ -660,10 +660,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/2",
+              "raw": "http://localhost:6000/posts/2",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "2"]
             }
           },
@@ -700,10 +700,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/100000",
+              "raw": "http://localhost:6000/posts/100000",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "100000"]
             }
           },
@@ -737,10 +737,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/",
+              "raw": "http://localhost:6000/posts/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", ""]
             }
           },
@@ -774,10 +774,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/",
+              "raw": "http://localhost:6000/posts/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", ""]
             }
           },
@@ -811,10 +811,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/",
+              "raw": "http://localhost:6000/posts/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", ""]
             }
           },
@@ -848,10 +848,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/15",
+              "raw": "http://localhost:6000/posts/15",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "15"]
             }
           },
@@ -885,10 +885,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/15",
+              "raw": "http://localhost:6000/posts/15",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "15"]
             }
           },
@@ -922,10 +922,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/1500",
+              "raw": "http://localhost:6000/posts/1500",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "1500"]
             }
           },
@@ -959,10 +959,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/1",
+              "raw": "http://localhost:6000/posts/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "1"]
             }
           },
@@ -996,10 +996,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/posts/1500",
+              "raw": "http://localhost:6000/posts/1500",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["posts", "1500"]
             }
           },
@@ -1041,10 +1041,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/400",
+              "raw": "http://localhost:6000/comments/400",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "400"]
             }
           },
@@ -1081,10 +1081,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/3",
+              "raw": "http://localhost:6000/comments/3",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "3"]
             }
           },
@@ -1121,10 +1121,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/",
+              "raw": "http://localhost:6000/comments/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", ""]
             }
           },
@@ -1161,10 +1161,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/commentsss/",
+              "raw": "http://localhost:6000/commentsss/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["commentsss", ""]
             }
           },
@@ -1198,10 +1198,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/",
+              "raw": "http://localhost:6000/comments/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", ""]
             }
           },
@@ -1235,10 +1235,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/",
+              "raw": "http://localhost:6000/comments/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", ""]
             }
           },
@@ -1272,10 +1272,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/commentss/",
+              "raw": "http://localhost:6000/commentss/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["commentss", ""]
             }
           },
@@ -1309,10 +1309,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/15",
+              "raw": "http://localhost:6000/comments/15",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "15"]
             },
             "description": "Can not change the cooment id"
@@ -1347,10 +1347,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/15",
+              "raw": "http://localhost:6000/comments/15",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "15"]
             }
           },
@@ -1384,10 +1384,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/150",
+              "raw": "http://localhost:6000/comments/150",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "150"]
             }
           },
@@ -1421,10 +1421,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/16",
+              "raw": "http://localhost:6000/comments/16",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "16"]
             }
           },
@@ -1458,10 +1458,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/comments/180",
+              "raw": "http://localhost:6000/comments/180",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["comments", "180"]
             }
           },
@@ -1503,10 +1503,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/",
+              "raw": "http://localhost:6000/likes/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", ""]
             }
           },
@@ -1543,10 +1543,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likesssss/",
+              "raw": "http://localhost:6000/likesssss/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likesssss", ""]
             }
           },
@@ -1583,10 +1583,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/3",
+              "raw": "http://localhost:6000/likes/3",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", "3"]
             }
           },
@@ -1623,10 +1623,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/30000",
+              "raw": "http://localhost:6000/likes/30000",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", "30000"]
             }
           },
@@ -1660,10 +1660,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/",
+              "raw": "http://localhost:6000/likes/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", ""]
             }
           },
@@ -1697,10 +1697,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/",
+              "raw": "http://localhost:6000/likes/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", ""]
             },
             "description": "One user can’t like a post more than once."
@@ -1735,10 +1735,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likesssss/",
+              "raw": "http://localhost:6000/likesssss/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likesssss", ""]
             }
           },
@@ -1772,10 +1772,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/2",
+              "raw": "http://localhost:6000/likes/2",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", "2"]
             }
           },
@@ -1809,10 +1809,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:9000/likes/2000",
+              "raw": "http://localhost:6000/likes/2000",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "9000",
+              "port": "6000",
               "path": ["likes", "2000"]
             }
           },
