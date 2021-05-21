@@ -42,110 +42,110 @@ CREATE TABLE `likes` (
   CONSTRAINT `fk_likes_posts` FOREIGN KEY (`postId`) REFERENCES `posts` (`postId`)
 );
 INSERT INTO users
-VALUES (1, 1, "sfitzroy0", "MrtmM9U", "heheha@gmial.com"),
+VALUES (1, 1, "sfitzroy0", "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC", "heheha@gmial.com"),
   (
     2,
     2,
     "wwalsom1",
-    "8X2HT3c68B7",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "heheha@gmial.com"
   ),
   (
     3,
     3,
     "flepine2",
-    "UaQRqQv",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "tbiggen2@bloglines.com"
   ),
   (
     4,
     4,
     "graxworthy3",
-    "q6FCuS92",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "heheha@gmial.com"
   ),
   (
     5,
     5,
     "rscoines4",
-    "bVnARSYc",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "meet@outlook.com"
   ),
   (
     6,
     6,
     "agerrelts5",
-    "b0O6lGp",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "heheha@gmial.com"
   ),
   (
     7,
     7,
     "cdebrett6",
-    "5q5Dlz5ATH",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "ggarthshore6@latimes.com"
   ),
   (
     8,
     8,
     "rtewkesbury7",
-    "cU8uaz3LI",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "bstokey7@list-manage.com"
   ),
   (
     9,
     9,
     "mtremathick8",
-    "tcbUF4",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "jskynner8@economist.com"
   ),
   (
     10,
     10,
     "cwardingley9",
-    "kw30lw",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "ncorter9@pcworld.com"
   ),
   (
     11,
     11,
     "bruea",
-    "Dbgd3lQSToMV",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "heheha@gmial.com"
   ),
   (
     12,
     12,
     "skulicb",
-    "SXBelCGKkm",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "blampettb@sphinn.com"
   ),
   (
     13,
     13,
     "ddohertyc",
-    "dTAjXBDi",
+   "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "emallockc@nasa.gov"
   ),
   (
     14,
     14,
     "nklimtd",
-    "WYE8n5LcCJ",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "ljurasekd@sakura.ne.jp"
   ),
   (
     15,
     15,
     "fhayhoee",
-    "8x6Dt3WcwhH",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "heheha@gmial.com"
   ),
   (
     16,
     16,
     "lbartsf",
-    "7kLHbf8y5e0f",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "aslocomf@arstechnica.com"
   );
 INSERT INTO posts
