@@ -1,6 +1,8 @@
 const router = require('express').Router();
 
 const { validateAgainstSchema } = require('../lib/validation');
+const { generateAuthToken, requireAuthentication} = require('../lib/auth');
+const mysqlPool = require('../lib/mysqlPool');
 const {
     LikeSchema,
     checkLikesId,
@@ -98,19 +100,29 @@ router.get('/:id', async (req, res, next) => {
 /*
  * Route to delete a like.
  */
-router.delete('/:id', async (req, res, next) => {
-    try {
-      const deleteSuccessful = await deleteLikeById(parseInt(req.params.id));
-      if (deleteSuccessful) {
-        res.status(204).end();
-      } else {
-        next();
+router.delete('/:id', requireAuthentication, async (req, res, next) => {
+  const [ results ] = await mysqlPool.query(
+    'SELECT * FROM likes WHERE id = ?',
+    [ req.params.id]
+  );
+  if (req.user != results[0].userId) {
+    res.status(403).send({
+      error: "Unauthorized to access the specified resource"
+    });
+  } else {
+      try {
+        const deleteSuccessful = await deleteLikeById(parseInt(req.params.id));
+        if (deleteSuccessful) {
+          res.status(204).end();
+        } else {
+          next();
+        }
+      } catch (err) {
+        console.error(err);
+        res.status(500).send({
+          error: "Unable to delete like.  Please try again later."
+        });
       }
-    } catch (err) {
-      console.error(err);
-      res.status(500).send({
-        error: "Unable to delete like.  Please try again later."
-      });
     }
   });
 

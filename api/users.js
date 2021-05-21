@@ -1,6 +1,8 @@
 const router = require('express').Router();
 
 const { validateAgainstSchema }  = require('../lib/validation');
+const { generateAuthToken, requireAuthentication} = require('../lib/auth');
+const mysqlPool = require('../lib/mysqlPool');
 const {
     UserSchema,
     getUsersPage,
@@ -8,7 +10,9 @@ const {
     insertNewUser,
     getUserDetailsById,
     replaceUserById,
-    deleteUserById
+    deleteUserById,
+    getUserByUserName,
+    validateUser
 } = require('../models/users');
 
 
@@ -73,6 +77,38 @@ router.post('/', async (req, res) => {
     }
   });
 
+  router.post('/login', async (req, res) => {
+    if (req.body && req.body.userName && req.body.userPassword) {
+      try {
+        const authenticated = await validateUser(req.body.userName, req.body.userPassword);
+        if (authenticated) {
+  
+          const [ userResults ] = await mysqlPool.query(
+            'SELECT * FROM users WHERE userName = ?',
+            [ req.body.userName]
+          );
+      
+          res.status(200).send({
+            token: generateAuthToken(userResults[0].id)
+          });
+        } else {
+          res.status(401).send({
+            error: "Invalid authentication credentials."
+          });
+        }
+      } catch (err) {
+        console.error("  -- error:", err);
+        res.status(500).send({
+          error: "Error logging in.  Try again later."
+        });
+      }
+    } else {
+      res.status(400).send({
+        error: "Request body needs `userName` and `password`."
+      });
+    }
+  });
+
 
 /*
  * Route to fetch info about a specific user.
@@ -97,11 +133,14 @@ router.get('/:id', async (req, res, next) => {
 /*
  * Route to replace data for a user.
  */
-router.put('/:id', async (req, res, next) => {
-  const id = parseInt(req.params.id)
-    if(id === req.body.userId){
-      if (validateAgainstSchema(req.body, UserSchema)) {
+router.put('/:id', requireAuthentication, async (req, res, next) => {
+  if (req.user != req.params.id) {
+    res.status(403).send({
+      error: "Unauthorized to access the specified resource"
+    });
+  } else {
         try {
+          const id = parseInt(req.params.id)
           const updateSuccessful = await replaceUserById(id, req.body);
           if (updateSuccessful) {
             res.status(200).send({
@@ -118,35 +157,32 @@ router.put('/:id', async (req, res, next) => {
             error: "Unable to update specified user.  Please try again later."
           });
         }
-      } else {
-        res.status(400).send({
-          error: "Request body is not a valid user object"
-        });
       }
-    }else{
-      res.status(500).send({
-        error: "Unable to update specified user. Because can not change the user id."
-      });
-    }
   });
   
   
   /*
    * Route to delete a user.
    */
-  router.delete('/:id', async (req, res, next) => {
-    try {
-      const deleteSuccessful = await deleteUserById(parseInt(req.params.id));
-      if (deleteSuccessful) {
-        res.status(204).end();
-      } else {
-        next();
-      }
-    } catch (err) {
-      console.error(err);
-      res.status(500).send({
-        error: "Unable to delete user.  Please try again later."
+  router.delete('/:id', requireAuthentication, async (req, res, next) => {
+    if (req.user != req.params.id) {
+      res.status(403).send({
+        error: "Unauthorized to access the specified resource"
       });
+    } else {
+      try {
+        const deleteSuccessful = await deleteUserById(parseInt(req.params.id));
+        if (deleteSuccessful) {
+          res.status(204).end();
+        } else {
+          next();
+        }
+      } catch (err) {
+        console.error(err);
+        res.status(500).send({
+          error: "Unable to delete user.  Please try again later."
+        });
+      }
     }
   });
 

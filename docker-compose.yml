@@ -12,6 +12,13 @@ services:
       MYSQL_PASSWORD: "group8"
       MYSQL_HOST: mysql
       MYSQL_PORT: 3306
+      REDIS_HOST: redis
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
 
   mysql:
     image: mysql:latest
