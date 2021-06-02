@@ -22,13 +22,11 @@ const upload = multer({
     callback(null, !!acceptedFileTypes[file.mimetype]);
   },
 });
-
-// router.use("/media/video", express.static(`${__dirname}/uploads`));
+console.log("second ", `${__dirname}/uploads`);
 
 router.post("/", upload.single("videoFile"), async (req, res) => {
   console.log("== req.body:", req.body);
   console.log("== req.file:", req.file);
-  console.log("__dirname ", process.cwd());
   if (
     req.file &&
     req.body &&
@@ -39,11 +37,10 @@ router.post("/", upload.single("videoFile"), async (req, res) => {
     const video = {
       contentType: req.file.mimetype,
       filename: req.file.filename,
-      url: `/media/videos/${req.file.filename}`,
+      url: `/videos/media/videos/${req.file.filename}`,
       videoId: parseInt(req.body.videoId),
       postId: parseInt(req.body.postId),
       userId: parseInt(req.body.userId),
-      path: req.file.path,
     };
     try {
       // const id = await insertNewPhoto(req.body);
@@ -66,4 +63,23 @@ router.post("/", upload.single("videoFile"), async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res, next) => {
+  try {
+    const video = await getVideoInfoById(parseInt(req.params.id));
+    if (video) {
+      res.status(200).send(video);
+    } else {
+      next();
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({
+      error: "Unable to fetch video.  Please try again later.",
+    });
+  }
+});
+
+router.use("/media/videos", express.static(`${__dirname}/uploads`));
+
+console.log(`${__dirname}/uploads`);
 module.exports = router;

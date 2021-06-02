@@ -83,6 +83,7 @@ app.use(express.static("public"));
  * top-level router lives in api/index.js.  That's what we include here, and
  * it provides all of the routes.
  */
+// console.log("first: ", `${__dirname}/api/uploads`);
 app.use("/", api);
 
 app.use("*", function (req, res, next) {

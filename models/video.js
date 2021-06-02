@@ -12,10 +12,9 @@ const videoSchema = {
 exports.videoSchema = videoSchema;
 
 async function getVideoInfoById(id) {
-  const [results] = await mysqlPool.query(
-    "SELECT * FROM users WHERE videoId = ?",
-    [id]
-  );
+  const [results] = await mysqlPool.query("SELECT * FROM videos WHERE id = ?", [
+    id,
+  ]);
   return results[0];
 }
 exports.getVideoInfoById = getVideoInfoById;
