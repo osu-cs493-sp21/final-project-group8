@@ -156,4 +156,4 @@ router.delete("/:id", requireAuthentication, async (req, res, next) => {
   }
 });
 
-exports.router = router;
+module.exports = router;
