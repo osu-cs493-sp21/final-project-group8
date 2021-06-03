@@ -13,6 +13,8 @@ const {
   deletePostById,
 } = require("../models/posts");
 
+const { getVideoInfoByPostId } = require("../models/video");
+
 /*
  * Route to return a paginated list of posts.
  */
@@ -48,6 +50,7 @@ router.get("/:id", async (req, res, next) => {
   try {
     const post = await getPostDetailsById(parseInt(req.params.id));
     if (post) {
+      post.videos = await getVideoInfoByPostId(parseInt(req.params.id));
       res.status(200).send(post);
     } else {
       next();

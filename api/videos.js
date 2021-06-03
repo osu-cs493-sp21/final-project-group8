@@ -2,8 +2,14 @@ const router = require("express").Router();
 const multer = require("multer");
 const crypto = require("crypto");
 const express = require("express");
+const { generateAuthToken, requireAuthentication } = require("../lib/auth");
+const mysqlPool = require("../lib/mysqlPool");
 
-const { insertNewVideo, getVideoInfoById } = require("../models/video");
+const {
+  insertNewVideo,
+  getVideoInfoById,
+  deleteVideosById,
+} = require("../models/video");
 
 const acceptedFileTypes = {
   "video/mp4": "mp4",
@@ -76,6 +82,31 @@ router.get("/:id", async (req, res, next) => {
     res.status(500).send({
       error: "Unable to fetch video.  Please try again later.",
     });
+  }
+});
+
+router.delete("/:id", requireAuthentication, async (req, res, next) => {
+  const [results] = await mysqlPool.query("SELECT * FROM videos WHERE id = ?", [
+    req.params.id,
+  ]);
+  if (req.user != results[0].userId) {
+    res.status(403).send({
+      error: "Unauthorized to access the specified resource",
+    });
+  } else {
+    try {
+      const deleteSuccessful = await deleteVideosById(parseInt(req.params.id));
+      if (deleteSuccessful) {
+        res.status(204).end();
+      } else {
+        next();
+      }
+    } catch (err) {
+      console.error(err);
+      res.status(500).send({
+        error: "Unable to delete comment.  Please try again later.",
+      });
+    }
   }
 });
 
