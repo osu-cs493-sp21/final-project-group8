@@ -41,8 +41,25 @@ CREATE TABLE `likes` (
   UNIQUE KEY (`likeId`),
   CONSTRAINT `fk_likes_posts` FOREIGN KEY (`postId`) REFERENCES `posts` (`postId`)
 );
+DROP TABLE IF EXISTS `videos`;
+CREATE TABLE `videos` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `videoId` MEDIUMINT NOT NULL,
+  `userId` MEDIUMINT NOT NULL,
+  `postId` MEDIUMINT NOT NULL,
+  `filename` varchar(255),
+  `url` varchar(255),
+  `contentType` varchar(255),
+  PRIMARY KEY (`id`)
+);
 INSERT INTO users
-VALUES (1, 1, "sfitzroy0", "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC", "heheha@gmial.com"),
+VALUES (
+    1,
+    1,
+    "sfitzroy0",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
+    "heheha@gmial.com"
+  ),
   (
     2,
     2,
@@ -124,7 +141,7 @@ VALUES (1, 1, "sfitzroy0", "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/
     13,
     13,
     "ddohertyc",
-   "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
+    "$2a$08$hSs9WABu6az107iJZ1aUMer2Uny1mLNymSjnZv5f/Su1/1Il2CKeC",
     "emallockc@nasa.gov"
   ),
   (

@@ -1,18 +1,18 @@
 const express = require("express");
 const morgan = require("morgan");
 const api = require("./api");
-const redis = require('redis');
+const redis = require("redis");
 
 const app = express();
 const port = process.env.PORT || 8000;
 
 const redisClient = redis.createClient(
-  process.env.REDIS_PORT || '6379',
-  process.env.REDIS_HOST || '127.0.0.1'
+  process.env.REDIS_PORT || "6379",
+  process.env.REDIS_HOST || "127.0.0.1"
 );
 
 const rateLimitWindowMS = 60000;
-const rateLimitMaxRequests = 5;
+const rateLimitMaxRequests = 10;
 
 function getUserTokenBucket(ip) {
   return new Promise((resolve, reject) => {
@@ -25,7 +25,7 @@ function getUserTokenBucket(ip) {
       } else {
         resolve({
           tokens: rateLimitMaxRequests,
-          last: Date.now()
+          last: Date.now(),
         });
       }
     });
@@ -50,12 +50,9 @@ async function rateLimit(req, res, next) {
 
     const currentTimestamp = Date.now();
     const ellapsedTime = currentTimestamp - tokenBucket.last;
-    tokenBucket.tokens += ellapsedTime *
-      (rateLimitMaxRequests / rateLimitWindowMS);
-    tokenBucket.tokens = Math.min(
-      tokenBucket.tokens,
-      rateLimitMaxRequests
-    );
+    tokenBucket.tokens +=
+      ellapsedTime * (rateLimitMaxRequests / rateLimitWindowMS);
+    tokenBucket.tokens = Math.min(tokenBucket.tokens, rateLimitMaxRequests);
     tokenBucket.last = currentTimestamp;
 
     if (tokenBucket.tokens >= 1) {
@@ -64,7 +61,7 @@ async function rateLimit(req, res, next) {
       next();
     } else {
       res.status(429).send({
-        error: "Too many request per minute.  Please wait a bit..."
+        error: "Too many request per minute.  Please wait a bit...",
       });
     }
   } catch (err) {
@@ -86,6 +83,7 @@ app.use(express.static("public"));
  * top-level router lives in api/index.js.  That's what we include here, and
  * it provides all of the routes.
  */
+// console.log("first: ", `${__dirname}/api/uploads`);
 app.use("/", api);
 
 app.use("*", function (req, res, next) {
